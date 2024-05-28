@@ -32,8 +32,7 @@ jobs:
           image: mattermost/mattermost-team-edition
           flags: --port=8065 --no-cpu-throttling
           env_vars: |
-            MM_USERNAME=admin
-            MM_PASSWORD=admin
-            MM_DBNAME=bour
-            MM_SQLSETTINGS_DATASOURCE=postgres://bour:bour@35.239.186.51:5432/bour?sslmode=disable&connect_timeout=10
-#slash
+            MM_USERNAME=balde_mahssni_lfahem
+            MM_PASSWORD=balde_mahssni_lfahem
+            MM_DBNAME=balde_mahssni_lfahem
+            MM_SQLSETTINGS_DATASOURCE=postgres://balde_mahssni_lfahem:balde_mahssni_lfahem@35.239.186.51:5432/balde_mahssni_lfahem?sslmode=disable&connect_timeout=10
