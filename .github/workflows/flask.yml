@@ -1,11 +1,11 @@
-name: Deploy Flask app to Google Cloud Run
+name: Deploy Next.js app to Google Cloud Run
 
 on:
   push:
-    branches: []
+    branches: [main]
 
 env:
-  app: flask
+  app: flask-app
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: read
       id-token: write
-      packages: write # Allow CI to 
+      packages: write # Allow CI to write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -46,3 +46,4 @@ jobs:
         with:
           service: ${{ steps.actor.outputs.lower }}-${{ env.app }}
           image: ${{ steps.compute.outputs.image }}
+          ports: ${{ env.PORT }}
