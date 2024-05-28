@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: read
       id-token: write
-      packages: write # Allow CI to write
+      packages: write # Allow CI to
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
